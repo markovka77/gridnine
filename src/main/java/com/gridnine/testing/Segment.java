@@ -22,6 +22,8 @@ public class Segment {
         return arrivalDate;
     }
 
+
+
     @Override
     public String toString() {
         DateTimeFormatter fmt =
