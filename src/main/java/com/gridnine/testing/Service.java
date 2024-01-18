@@ -15,6 +15,9 @@ public class Service {
                 .stream().toList();
     }
 
+
+
+
     //выводим  список, в котором вылет до текущего момента времени
     static List<Flight> outputFlightWhereDepartureToTheCurrentPointInTime(List<Flight>allFls) {
         return allFls.stream()
@@ -40,7 +43,6 @@ public class Service {
         for(Flight flight:allFls) {
             List<Segment> seg = flight.getSegments();
             for (int i = 0; i < seg.size()-1; i++) {
-                System.out.println(seg);
                 if (seg.get(i + 1).getDepartureDate()
                         .isAfter(seg.get(i).getArrivalDate().plusHours(2))) {
                     twoHoursAtEarth.add(flight);
