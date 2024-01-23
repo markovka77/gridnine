@@ -23,7 +23,6 @@ public class Segment {
     }
 
 
-
     @Override
     public String toString() {
         DateTimeFormatter fmt =

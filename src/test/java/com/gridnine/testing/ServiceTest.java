@@ -14,29 +14,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ServiceTest {
 
-    static List<Flight> allFls = FlightBuilder.createFlights()
+   List<Flight> allFls = FlightBuilder.createFlights()
             .stream().toList();
 
     @Test
     void outputTestSet() {
 
-    }
-
-    @Test
-    void outputFlightWhereDepartureToTheCurrentPointInTime() {
 
 
     }
 
-    @Test
-    void outputFlightWhereArrivalDateBeforeDepartureDate() {
-
-    }
-
-    @Test
-    void outputFlightWhereTotalTimeSpentOnEarthExceedsTwoHours() {
-
-    }
 
 
 }
