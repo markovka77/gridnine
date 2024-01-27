@@ -13,14 +13,14 @@ public class OutputFlightWhereDepartureToTheCurrentPointInTime implements Filter
 
     @Override
     public List<Flight> filter(List<Flight> allFls) {
-        List<Flight> test = new ArrayList<>(allFls);
+        List<Flight> tmp = new ArrayList<>(List.copyOf(allFls));
         List<Flight> list1 = new ArrayList<>(allFls.stream()
                 .filter(flight -> flight.getSegments().stream()
                         .allMatch(segment -> segment.getDepartureDate()
                                 .isBefore(dateTimeNow))).toList());
         System.out.println("Все полёты, кроме тех, в которых отправление раньше текущего времени:");
-        test.removeAll(list1);
-        test.forEach(System.out::println);
-        return test;
+        tmp.removeAll(list1);
+        tmp.forEach(System.out::println);
+        return tmp;
     }
 }

@@ -7,7 +7,7 @@ public class Main {
         List<Flight> allFls = FlightBuilder.createFlights();
         //получение списка всех полетов
         System.out.println("Список всех полетов :");
-        Service.outputTestSet();
+        System.out.println(allFls);
         System.out.println();
 
         //получение списка полетов с фильтром 1

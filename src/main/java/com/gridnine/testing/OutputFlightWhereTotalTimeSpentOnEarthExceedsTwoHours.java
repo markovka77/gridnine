@@ -13,11 +13,14 @@ public class OutputFlightWhereTotalTimeSpentOnEarthExceedsTwoHours implements Fi
 
     @Override
     public List<Flight> filter(List<Flight> allFls) {
-                allFls.stream()
+        List<Flight> tmp = allFls.stream()
                 .filter(flight -> TotalTime(flight) <= 2)
-                .forEach(System.out::println);
-        return allFls;
+                .toList();
+        tmp.forEach(System.out::println);
+        return tmp;
+
     }
+
 
     private long TotalTime(Flight flight) {
         List<Segment> segments = flight.getSegments();
