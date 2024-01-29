@@ -13,16 +13,14 @@ class OutputFlightWhereArrivalDateBeforeDepartureDateTest {
     OutputFlightWhereArrivalDateBeforeDepartureDate test =
             new OutputFlightWhereArrivalDateBeforeDepartureDate();
 
-    List<Flight> actual = test.filter(allFls);
+
 
     @Test
     void filter() {
-
-
+        List<Flight> actual = test.filter(allFls);
         assertNotNull(actual);
         assertNotEquals(allFls, actual);
         assert (actual.size() < allFls.size());
-
 
     }
 
